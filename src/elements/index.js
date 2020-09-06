@@ -1,6 +1,6 @@
-import react { Container } from "../components/Container"
- :
-export * from "./ContainerElements"
+import react from "react";
+import { Container } from "../components/Container";
+import * from "./ContainerElements";
 
 export const IndexPage = () => {
     <container>
@@ -8,4 +8,4 @@ export const IndexPage = () => {
     </container>
 }
 
-export default Indexpage;
+export default IndexPage;
