@@ -5,10 +5,10 @@ import {FeatureImageWrapper} from "../elements"
 
 export const FeatureImage = ({ fixed }) => {
     
-    const data = useStaticQuery(graphql`
-        query {
-            imageSharp(fixed: {originalName: {eq: "office.jpg"}}) {
-                fixed {
+    const data = useStaticQuery(graphql `
+        query{
+            imageSharp(fixed: {originalName: {eq: "office.jpg"}}){
+                fixed(width: 900, height: 450) {
                     ...GatsbyImageSharpFixed
                 }
             }
@@ -19,11 +19,9 @@ export const FeatureImage = ({ fixed }) => {
     return (
         <FeatureImageWrapper>
             <Img fixed={fixed ? fixed : data.imageSharp.fixed} style={{
-                position: "absolute",
+                //position: "absolute",
                 left: 0,
                 top: 0,
-                width: "100%",
-                height: "100%",
             }} alt="Hero image"/>
         </FeatureImageWrapper>
     )
